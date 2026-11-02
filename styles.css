@@ -30,10 +30,13 @@ a {
 }
 
 .first_screen {
-    background-image: url("./backgrounds/background-header.jpg");
-    background-size: 100% auto;
-    background-position: top center;
-    background-repeat: no-repeat;
+  width: 100%;
+  aspect-ratio: 1200 / 800;
+  container-type: size;
+  background-image: url("./backgrounds/background-header.jpg");
+  background-size: 100% auto;
+  background-position: top center;
+  background-repeat: no-repeat;
 }
 
 .main_menu {
@@ -46,23 +49,41 @@ a {
   margin: 0;
   font-size: 2rem;
   font-variant: small-caps;
+  transition: color 0.3s ease;
+}
+
+.main_menu a.current_page {
+    text-decoration: underline;
+    text-decoration-color: #E2D5D0;
+    text-decoration-thickness: 0.046875em;
+    text-underline-offset: 0.15625em;
+}
+
+.main_menu a:hover {
+  color: #AF5155;
+  text-decoration-color: #AF5155;
 }
 
 .main_content {
-  text-align: center;
+  margin-top: 7.5cqh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7.5cqh;
 }
 
 .book_title {
   width: 36%;
   height: auto;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  /*margin-top: 5%;
+  margin-bottom: 5%;*/
 }
 
 h1 {
     font-weight: 600;
     font-size: 2rem;
     font-variant: small-caps;
+    text-align: center;
     margin: 0;
 }
 
@@ -75,8 +96,8 @@ h1 {
   text-align: center;
   padding: 0.328em 0.797em;;
   border-radius: 5.625rem;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  /*margin-top: 5%;
+  margin-bottom: 5%;*/
 }
 
 .read_button:hover {
@@ -86,6 +107,7 @@ h1 {
 .separator {
   width: 100%;
   height: auto;
+  transform: translateY(20%);
 }
 
 /*  Нормализация блочной модели*/
